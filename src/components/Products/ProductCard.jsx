@@ -40,7 +40,12 @@ const Product = ({ getproduct }) => {
         key={getproduct._id }
         hoverable
         style={{ width: 240, margin: "16px" }}
-        cover={<img alt={getproduct.name} src={getproduct.imageUrl} />}
+        cover={
+      <div className="images">
+        <img alt={getproduct.name} src={getproduct.imageUrl} />
+      </div>  
+      
+      }
       >
         <Card.Meta title={getproduct.name} description={`$${getproduct.price}`} />
         <p className="desc">{getproduct.description}</p>
